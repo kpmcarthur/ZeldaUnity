@@ -10,6 +10,8 @@ public class LinkController : MonoBehaviour
     public float movementSpeed;
     public float pushScale;
     public static bool boomerangPresent = false;
+    
+    public Vector2 startPosition;
 
     public int health { get { return currentHealth; } }
     public int maxHealth;
@@ -38,6 +40,8 @@ public class LinkController : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        
+        startPosition = rigidbody2d.position;
 
         currentHealth = maxHealth;
     }
