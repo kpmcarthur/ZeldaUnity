@@ -29,6 +29,7 @@ public class LinkController : MonoBehaviour
     public GameObject bombPrefab;
 
     Vector2 lookDirection = new Vector2(0f, -1f);
+    public Vector2 startPosition;
 
     Rigidbody2D rigidbody2d;
     Animator animator;
@@ -38,6 +39,7 @@ public class LinkController : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        startPosition = rigidbody2d.position;
 
         currentHealth = maxHealth;
     }
