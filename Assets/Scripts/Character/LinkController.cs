@@ -15,6 +15,8 @@ public class LinkController : MonoBehaviour
     public int maxHealth;
     int currentHealth;
 
+    public Vector2 startPosition;
+
     public float invincibleTime;
     float invincibleTimer = 0f;
     bool invincible = false;
@@ -39,6 +41,7 @@ public class LinkController : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
+        startPosition = rigidbody2d.position;
         currentHealth = maxHealth;
     }
 
